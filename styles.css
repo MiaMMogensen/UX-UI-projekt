@@ -1,0 +1,178 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    gap: 60px;
+    height: 100vh;
+    background-color: #C37EC2;
+    transition: background-color 0.5s ease;
+    padding: 0 200px;
+}
+
+.content {
+    max-width: 600px;
+    text-align: left;
+    color: white;
+    flex: 1;
+}
+
+h1 {
+    font-size: 35px;
+    font-weight: bold;
+}
+
+h2 {
+    font-size: 25px;
+    font-weight: bold;
+    margin-bottom: -10px;
+}
+
+.description {
+    font-size: 20px;
+    max-width: 245px;
+}
+
+p {
+    position: relative;
+}
+
+p::after {
+    content: "";
+    display: block;
+    width: 238px;
+    height: 2px;
+    background-color: white;
+    margin-top: 10px;
+}
+
+.read-more {
+    background: none;
+    border: 2px solid white;
+    color: white;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 20px;
+    width: 238px;
+}
+
+.image-container {
+    position: relative;
+    flex: 1;
+}
+
+.background-image {
+    width: 500px;
+    height: auto;
+    object-fit: contain
+}
+
+.can {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 250px;
+    height: auto;
+}
+
+.highlight {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 900px; /* Adjust size as needed */
+    height: 900px;
+    background: radial-gradient(circle,  
+        rgba(255, 255, 255, 0.6) 0%,  /* Brighter center */
+        rgba(255, 255, 255, 0.4) 20%, /* Softer mid-tone */
+        rgba(255, 255, 255, 0.2) 40%, /* Fading out */
+        rgba(255, 255, 255, 0) 70%   /* Fully transparent */
+    );
+    border-radius: 50%;
+    pointer-events: none; /* Prevents it from interfering with clicks */
+    z-index: 0; /* Pushes it behind everything inside .image-container */
+}
+
+.arrow {
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: white;
+    position: absolute;
+}
+
+.arrow img {
+    width: 40px;
+    height: 40px;
+}
+
+.left {
+    left: 30px;
+}
+
+.right {
+    right: 30px;
+}
+
+.pop-out {
+    animation: popOut 0.2s forwards;
+}
+
+.pop-in {
+    animation: popIn 0.2s forwards;
+}
+
+#can-image {
+    position: absolute; /* Prevents layout shifts */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transform-origin: center center;
+}
+
+#wheat-image {
+    position: absolute; /* Prevents layout shifts */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transform-origin: center center;
+}
+
+.pop-out {
+    animation: popOut 0.2s forwards;
+}
+
+.pop-in {
+    animation: popIn 0.2s forwards;
+}
+
+@keyframes popOut {
+    0% {
+        transform: translate(-50%, -50%) scale(1);
+        opacity: 1;
+    }
+    100% {
+        transform: translate(-50%, -50%) scale(0.8);
+        opacity: 0;
+    }
+}
+
+@keyframes popIn {
+    0% {
+        transform: translate(-50%, -50%) scale(0.8);
+        opacity: 0;
+    }
+    100% {
+        transform: translate(-50%, -50%) scale(1);
+        opacity: 1;
+    }
+}
+
