@@ -1,3 +1,5 @@
+/* fonte */
+
 @font-face {
     font-family: "Inter_28pt-Bold";
     src: url(/fonts/Inter_28pt-Bold.ttf);
@@ -8,10 +10,14 @@
     src: url(/fonts/Inter_28pt-Regular.ttf);
 }
 
+/* baggrundsfarven på forsiden */
+
 .lilla-baggrund {
     background-color: #C37EC2;
     transition: background-color 0.5s ease;
 }
+
+/* styling af header = logo, navigation og kurv ikon */
 
 header {
     display: flex;
@@ -73,7 +79,7 @@ header {
     display: flex;
 }
 
-
+/* styling af footer */
 
 footer {
     background-color: black;
@@ -110,9 +116,7 @@ footer {
     padding: 0 25px;
 }
 
-
-
-
+/* styling af hero sektion */
 
 body {
     margin: 0;
@@ -120,7 +124,8 @@ body {
     text-align: center;
 }
 
-.hero, .hero-sort {
+.hero,
+.hero-sort {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -192,7 +197,8 @@ h2 {
     margin-top: 10px;
 }
 
-.read-more, .read-more-sort {
+.read-more,
+.read-more-sort {
     background: none;
     border: 2px solid white;
     color: white;
@@ -210,7 +216,8 @@ h2 {
     border-color: black;
 }
 
-.read-more:hover, .read-more-sort:hover {
+.read-more:hover,
+.read-more-sort:hover {
     background-color: black;
     transition: background-color 0.5s ease;
     border-color: transparent;
@@ -231,7 +238,8 @@ h2 {
     object-fit: contain
 }
 
-.can, .shop-can {
+.can,
+.shop-can {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -245,7 +253,8 @@ h2 {
     left: 68%;
 }
 
-.highlight, .highlight-gul {
+.highlight,
+.highlight-gul {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -272,15 +281,15 @@ h2 {
 
 .highlight-gul {
     background: radial-gradient(circle,
-    rgba(242, 216, 86, 0.6) 0%,
-    /* Brighter center */
-    rgba(242, 216, 86, 0.4) 20%,
-    /* Softer mid-tone */
-    rgba(242, 216, 86, 0.2) 40%,
-    /* Fading out */
-    rgba(242, 216, 86, 0) 70%
-    /* Fully transparent */
-);
+            rgba(242, 216, 86, 0.6) 0%,
+            /* Brighter center */
+            rgba(242, 216, 86, 0.4) 20%,
+            /* Softer mid-tone */
+            rgba(242, 216, 86, 0.2) 40%,
+            /* Fading out */
+            rgba(242, 216, 86, 0) 70%
+            /* Fully transparent */
+        );
     left: 75%;
 }
 
@@ -365,9 +374,7 @@ h2 {
 }
 
 
-
-
-
+/* styling af produkterne nederst på shop-siden */
 
 .products {
     display: flex;
@@ -401,6 +408,7 @@ h2 {
     align-items: center;
     width: 100%;
     height: 100%;
+    overflow: hidden;
 }
 
 .apa-shop {
@@ -417,13 +425,10 @@ h2 {
 
 .apa-hover {
     position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%; /* Dækker hele den overordnede container */
-    height: 100%;
-    object-fit: cover; /* Sikrer at billedet tilpasser sig korrekt */
-    opacity: 0; /* Gør det usynligt som standard */
-    transition: opacity 0.3s ease-in-out; /* Blød overgangseffekt */
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    z-index: 1;
+    scale: 1.1;
 }
 
 .apa-hover img {
@@ -435,8 +440,86 @@ h2 {
 .apa-shop:hover .apa-hover,
 .pils-shop:hover .apa-hover,
 .ipa-shop:hover .apa-hover {
-    opacity: 1; /* Bliver synlig ved hover */
+    opacity: 1;
+    /* Bliver synlig ved hover */
 }
 
 
 
+
+
+.popup {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: black;
+    color: white;
+    padding: 30px;
+    border-radius: 20px;
+    text-align: center;
+    width: 450px;
+    box-shadow: 0px 0px 10px rgba(0,0,0,0.5);
+    padding-bottom: 40px;
+}
+
+.popup input {
+    width: 215px;
+    padding: 10px;
+    margin: 10px 0;
+}
+
+.close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+.popup h2 {
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 0;
+}
+
+.basket {
+    display: none;
+    position: fixed;
+    top: 35.7%;
+    left: 83%;
+    transform: translate(-50%, -50%);
+    background: white;
+    color: black;
+    padding: 30px;
+    border-radius: 20px;
+    text-align: center;
+    width: 380px;
+    height: 485px;
+    padding-bottom: 40px;
+}
+
+.basket img {
+    height: 55px;
+    width: auto;
+    padding: 0 5px 0 36px;
+}
+
+.basket h2 {
+
+}
+
+.basket .read-more-sort {
+    margin-top: 350px;
+}

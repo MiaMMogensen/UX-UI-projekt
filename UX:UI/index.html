@@ -9,9 +9,12 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://use.typekit.net/jdy6sqo.css">
     <script src="script.js" defer></script>
+    <link rel="icon" type="image/x-icon" href="img/favicon.ico">
 </head>
 
 <body class="lilla-baggrund">
+
+    <!-- Header med logo og navigation -->
 
     <header>
         <div class="logo">
@@ -24,11 +27,13 @@
             <ul>
                 <li><a href="shop.html">Shop</a></li>
                 <li><a href="ourstory.html">Our Story</a></li>
-                <a class="kurv" href="kurv.html"><img src="img/kurv.png" alt="billede af en indkøbskurv"></a>
+                <a id="kurv" class="kurv" onclick="openBasket()"><img src="img/kurv.png" alt="billede af en indkøbskurv"></a>
             </ul>
             
         </nav>
     </header>
+
+    <!-- hero sektion med tekst og billede -->
 
     <div class="hero">
         <button class="arrow left" onclick="prevSlide()">
@@ -49,6 +54,28 @@
             <img src="img/pilhvid.png" alt="Right Arrow">
         </button>
     </div>
+
+    <div id="overlay" class="overlay"></div>
+
+    <div id="newsletterPopup" class="popup">
+        <span class="close" onclick="closePopup()"><img src="img/krydshvid.png" alt="billede af et kryds"></span>
+        <h2>SUBSCRIBE TO OUR NEWSLETTER -
+        <br> and get 15% off your first order!</h2>
+        <input type="email" placeholder="Email" required>
+        <button class="read-more">Subscribe</button>
+    </div>
+
+    <div id="basketPopup" class="basket">
+        <span class="close" onclick="closeBasket()"><img src="img/kurv.png" alt="billede af en indkøbskurv"></span>
+        <h2>TASTING BOX - 1 + 45 DKK</h2>
+        <hr>
+        <h2>TOTAL 45 DKK</h2>
+        <button class="read-more-sort">GO TO BASKET</button>
+    </div>
+
+   
+
+    <!-- Footer med links og information -->
 
     <footer>
         <div class="footer-vogh">

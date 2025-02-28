@@ -52,3 +52,30 @@ function prevSlide() {
 document.addEventListener('DOMContentLoaded', updateSlide);
 
 
+
+
+
+setTimeout(function() {
+    document.getElementById('newsletterPopup').style.display = 'block';
+    document.getElementById('overlay').style.display = 'block';
+}, 5000);
+
+function closePopup() {
+    document.getElementById('newsletterPopup').style.display = 'none';
+    document.getElementById('overlay').style.display = 'none';
+}
+
+
+
+
+
+function openBasket() {
+    document.getElementById('basketPopup').style.display = 'block';
+    document.getElementById('overlay').style.display = 'block';
+}
+
+function closeBasket() {
+    document.getElementById('basketPopup').style.display = 'none';
+    document.getElementById('overlay').style.display = 'none';
+}
+
