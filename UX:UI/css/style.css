@@ -503,7 +503,7 @@ h2 {
     background: white;
     color: black;
     padding: 30px;
-    border-radius: 20px;
+    border-radius: 30px;
     text-align: center;
     width: 380px;
     height: 485px;
@@ -516,10 +516,28 @@ h2 {
     padding: 0 5px 0 36px;
 }
 
-.basket h2 {
 
-}
 
 .basket .read-more-sort {
-    margin-top: 350px;
+    font-size: 30px;
+    width: 360px;
+    margin-top: 30px;
+}
+
+.basket-tekst, .basket-tekst-2 {
+    display: flex;
+    justify-content: space-between;
+    padding: 60px 8px 0 8px;
+}
+
+.basket hr {
+    margin-top: 260px;
+}
+
+.basket-tekst-2 {
+    padding-top: 0;
+}
+
+.basket h2 {
+    margin-top: 10px;
 }
