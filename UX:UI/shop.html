@@ -25,9 +25,10 @@
 
         <nav class="menu-sort">
             <ul>
-                <li><a href="shop.html">Shop</a></li>
-                <li><a href="ourstory.html">Our Story</a></li>
-                <a class="kurv" href="kurv.html"><img src="img/kurv.png" alt="billede af en indkøbskurv"></a>
+                <li><a href="shop.html" class="active">Shop</a></li>
+                <li><a href="#">Our Story</a></li>
+                <a id="kurv" class="kurv" onclick="openBasket()"><img src="img/kurv.png"
+                    alt="billede af en indkøbskurv"></a>
             </ul>
 
         </nav>
@@ -67,6 +68,25 @@
         <div class="ipa-shop"><img src="img/ipa øl.png" alt="billede af ipa øl">
             <img class="apa-hover" src="img/ipa-hover.png" alt="hover billede read more"></div>
     </section>
+
+    <div id="overlay" class="overlay"></div>
+
+    <!-- indkøbskurv -->
+
+    <div id="basketPopup" class="basket">
+        <span class="close" onclick="closeBasket()"><img src="img/kurv.png" alt="billede af en indkøbskurv"></span>
+        <div class="basket-tekst">
+            <h2>TASTING BOX</h2>
+            <h2>- 1 +</h2>
+            <h2>45 DKK</h2>
+        </div>
+        <hr>
+        <div class="basket-tekst-2">
+            <h2>TOTAL</h2>
+            <h2>45 DKK</h2>
+        </div>
+        <button class="read-more-sort">GO TO BASKET</button>
+    </div>
 
     <!-- Footer med links og information -->
 

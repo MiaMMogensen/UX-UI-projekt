@@ -79,6 +79,11 @@ header {
     display: flex;
 }
 
+nav ul li a.active {
+    border-bottom: 2px solid black;
+    padding-bottom: 10px;
+}
+
 /* styling af footer */
 
 footer {
@@ -497,8 +502,8 @@ h2 {
 .basket {
     display: none;
     position: fixed;
-    top: 35.7%;
-    left: 83%;
+    top: 38.9%;
+    left: 82.7%;
     transform: translate(-50%, -50%);
     background: white;
     color: black;
