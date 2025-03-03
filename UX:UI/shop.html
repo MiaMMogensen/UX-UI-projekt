@@ -1,72 +1,108 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>ZeroBuzz Brew - Shop</title>
-    <meta name="description" content="shop side">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="https://use.typekit.net/jdy6sqo.css">
+    <meta name="description" content="shop side" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="https://use.typekit.net/jdy6sqo.css" />
     <script src="script.js" defer></script>
-    <link rel="icon" type="image/x-icon" href="img/favicon.ico">
-</head>
+    <link rel="icon" type="image/x-icon" href="img/favicon.ico" />
+  </head>
 
-<body>
-
+  <body>
     <!-- Header med logo og navigation -->
 
     <header>
-        <div class="logo">
-            <a href="index.html">
-                <img src="img/logo.png" alt="billede af firmaets logo">
-            </a>
-        </div>
+      <div class="logo">
+        <a href="index.html">
+          <img src="img/logo.png" alt="billede af firmaets logo" />
+        </a>
+      </div>
 
-        <nav class="menu-sort">
-            <ul>
-                <li><a href="shop.html" class="active">Shop</a></li>
-                <li><a href="#">Our Story</a></li>
-                <a id="kurv" class="kurv" onclick="openBasket()"><img src="img/kurv.png"
-                    alt="billede af en indkøbskurv"></a>
-            </ul>
-
-        </nav>
+      <nav class="menu-sort">
+        <ul>
+          <li><a href="shop.html" class="active">Shop</a></li>
+          <li><a href="#">Our Story</a></li>
+          <a id="kurv" class="kurv" onclick="openBasket()"
+            ><img src="img/kurv.png" alt="billede af en indkøbskurv"
+          /></a>
+        </ul>
+      </nav>
     </header>
 
     <!-- hero sektion med tekst og billede -->
 
     <div class="hero-sort">
-        <div class="content-sort">
-            <h1>ZEROBUZZ BREW TASTING BOX</h1>
-            <p class="description-shop">Try our alcohol-free APA, IPA, and Pilsner in a tasting box — at a special
-                price!
-                <br> <br>
-                Great taste, better vibes.</p>
-            <button class="read-more-sort">Read more</button>
-        </div>
-        <div class="image-container">
-            <div class="highlight-gul"></div>
-            <img src="img/shop-billede.png" alt="billede af alkohol fri øl" class="shop-can">
-        </div>
+      <div class="content-sort">
+        <h1>ZEROBUZZ BREW TASTING BOX</h1>
+        <p class="description-shop">
+          Try our alcohol-free APA, IPA, and Pilsner in a tasting box — at a
+          special price! <br />
+          <br />
+          Great taste, better vibes.
+        </p>
+        <button class="read-more-sort">Read more</button>
+      </div>
+      <div class="image-container">
+        <div class="highlight-gul"></div>
+        <img
+          src="img/shop-billede.png"
+          alt="billede af alkohol fri øl"
+          class="shop-can"
+        />
+      </div>
+    </div>
+
+    <!-- nyhedsbrev pop-up -->
+
+    <div id="overlay" class="overlay"></div>
+
+    <div id="newsletterPopup" class="popup">
+      <span class="close" onclick="closePopup()"
+        ><img src="img/krydshvid.png" alt="billede af et kryds"
+      /></span>
+      <h2>
+        SUBSCRIBE TO OUR NEWSLETTER - <br />
+        and get 15% off your first order!
+      </h2>
+      <input type="email" placeholder="Email" required />
+      <button class="read-more">Subscribe</button>
     </div>
 
     <!-- sektion med billeder af produkterne -->
 
     <section class="products">
-        <h1>OUR PRODUCTS</h1>
-        <img class="pil" src="img/arrow-down.png" alt="pil nedad">
+      <h1>OUR PRODUCTS</h1>
+      <img class="pil" src="img/arrow-down.png" alt="pil nedad" />
     </section>
 
     <section class="product-img">
-        <div class="apa-shop"><img src="img/apa øl.png" alt="billede af apa øl">
-            <img class="apa-hover" src="img/apa-hover.png" alt="hover billede read more">
-        </div>
-        <div class="pils-shop"><img src="img/pils øl.png" alt="billede af pils øl">
-            <img class="apa-hover" src="img/pils-hover2.png" alt="hover billede read more">
-        </div>
-        <div class="ipa-shop"><img src="img/ipa øl.png" alt="billede af ipa øl">
-            <img class="apa-hover" src="img/ipa-hover.png" alt="hover billede read more"></div>
+      <div class="apa-shop">
+        <img src="img/apa øl.png" alt="billede af apa øl" />
+        <img
+          class="apa-hover"
+          src="img/apa-hover.png"
+          alt="hover billede read more"
+        />
+      </div>
+      <div class="pils-shop">
+        <img src="img/pils øl.png" alt="billede af pils øl" />
+        <img
+          class="apa-hover"
+          src="img/pils-hover2.png"
+          alt="hover billede read more"
+        />
+      </div>
+      <div class="ipa-shop">
+        <img src="img/ipa øl.png" alt="billede af ipa øl" />
+        <img
+          class="apa-hover"
+          src="img/ipa-hover.png"
+          alt="hover billede read more"
+        />
+      </div>
     </section>
 
     <div id="overlay" class="overlay"></div>
@@ -74,38 +110,38 @@
     <!-- indkøbskurv -->
 
     <div id="basketPopup" class="basket">
-        <span class="close" onclick="closeBasket()"><img src="img/kurv.png" alt="billede af en indkøbskurv"></span>
-        <div class="basket-tekst">
-            <h2>TASTING BOX</h2>
-            <h2>- 1 +</h2>
-            <h2>45 DKK</h2>
-        </div>
-        <hr>
-        <div class="basket-tekst-2">
-            <h2>TOTAL</h2>
-            <h2>45 DKK</h2>
-        </div>
-        <button class="read-more-sort">GO TO BASKET</button>
+      <span class="close" onclick="closeBasket()"
+        ><img src="img/kurv.png" alt="billede af en indkøbskurv"
+      /></span>
+      <div class="basket-tekst">
+        <h2>TASTING BOX</h2>
+        <h2>- 1 +</h2>
+        <h2>45 DKK</h2>
+      </div>
+      <hr />
+      <div class="basket-tekst-2">
+        <h2>TOTAL</h2>
+        <h2>45 DKK</h2>
+      </div>
+      <button class="read-more-sort">GO TO BASKET</button>
     </div>
 
     <!-- Footer med links og information -->
 
     <footer>
-        <div class="footer-vogh">
-            <p>Privacy Policy</p>
-            <p>Terms and Conditions</p>
-        </div>
-        <div class="footer-midt">
-            <p>+45 99 99 99 99</p>
-            <img src="img/logo-hvid.png" alt="billede af firmaets logo">
-            <p>zerobuzz@brew.dk</p>
-        </div>
-        <div class="footer-vogh">
-            <p>Newsletter</p>
-            <p>Copyright © 2025</p>
-        </div>
+      <div class="footer-vogh">
+        <p>Privacy Policy</p>
+        <p>Terms and Conditions</p>
+      </div>
+      <div class="footer-midt">
+        <p>+45 99 99 99 99</p>
+        <img src="img/logo-hvid.png" alt="billede af firmaets logo" />
+        <p>zerobuzz@brew.dk</p>
+      </div>
+      <div class="footer-vogh">
+        <p id="newsletterLink">Newsletter</p>
+        <p>Copyright © 2025</p>
+      </div>
     </footer>
-
-</body>
-
+  </body>
 </html>
