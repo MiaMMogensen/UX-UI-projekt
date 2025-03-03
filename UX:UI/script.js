@@ -1,6 +1,6 @@
 let currentIndex = 0;
 const backgrounds = ["#C37EC2", "#9FDDC8", "#F2D856"];
-const cans = ["IMG/pils øl.png", "IMG/apa øl.png", "IMG/ipa øl.png"];
+const cans = ["IMG/pilsol.png", "IMG/apaol.png", "IMG/ipaol.png"];
 const wheatImages = ["IMG/pilsbag.png", "IMG/apabag.png", "IMG/ipabag.png"];
 const titles = ["PILSNER", "APA", "IPA"];
 const descriptions = [
@@ -85,10 +85,4 @@ document
     document.getElementById("overlay").style.display = "block";
   });
 
-// Event listener til at åbne pop-up'en på klik på "Newsletter"
-document
-  .getElementById("newsletterLink")
-  .addEventListener("click", function () {
-    document.getElementById("newsletterPopup").style.display = "block";
-    document.getElementById("overlay").style.display = "block";
-  });
+
