@@ -1,7 +1,7 @@
 let currentIndex = 0;
 const backgrounds = ["#C37EC2", "#9FDDC8", "#F2D856"];
-const cans = ["IMG/pilsol.png", "IMG/apaol.png", "IMG/ipaol.png"];
-const wheatImages = ["IMG/pilsbag.png", "IMG/apabag.png", "IMG/ipabag.png"];
+const cans = ["img/pilsol.png", "img/apaol.png", "img/ipaol.png"];
+const wheatImages = ["img/pilsbag.png", "img/apabag.png", "img/ipabag.png"];
 const titles = ["PILSNER", "APA", "IPA"];
 const descriptions = [
   "Our alcohol-free pilsner beer delivers the crisp, refreshing taste of a classic pilsner without the alcohol. Brewed with traditional methods, it retains its light golden color, earthy aroma, and perfectly balanced bitterness.",
